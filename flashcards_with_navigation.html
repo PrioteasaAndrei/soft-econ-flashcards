@@ -1,0 +1,946 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .flashcard-container {
+            text-align: center;
+        }
+        .flashcard {
+            width: 300px;
+            height: 200px;
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+            display: none;
+        }
+        .answer {
+            margin-top: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="flashcard-container">
+
+    <div class="flashcard" id="card-0" onclick="showAnswer(0)">
+        <div><strong>Question:</strong></div>
+        <div> What is the aim of price differentiation?</div>
+        <div class="answer" id="answer-0"><strong>Answer:</strong> Price Differentiation is a strategy in which a business charges different prices for the same (or very similar) product based on the context (think bottle of beer supermarket vs untold). Context here refers to the spatial setting, convenience.   For similar products, differentiate on:- Quality (different raw material standards for different countries: e.g. algita ice cream uses better raw materials for Italy than for Poland, as Italians require a better quality)- Functions (e.g. better encryption standard for target clientele in military)- User-friendly (e.g. different user interface for different needs; e.g: for professional less is better, terminal accessibility is enough)</div>
+    </div>
+    
+    <div class="flashcard" id="card-1" onclick="showAnswer(1)">
+        <div><strong>Question:</strong></div>
+        <div> What are provisions?</div>
+        <div class="answer" id="answer-1"><strong>Answer:</strong> Provisions, in accounting and finance, refer to amounts set aside by a company to cover anticipated future expenses or losses.</div>
+    </div>
+    
+    <div class="flashcard" id="card-2" onclick="showAnswer(2)">
+        <div><strong>Question:</strong></div>
+        <div> What are Fixed Costs?</div>
+        <div class="answer" id="answer-2"><strong>Answer:</strong> Costs that remain constant over the production process / are independent of the number of productions (e.g: warming the hall, personel (assuming we do not hire with more products) machine costs (assuming we don’t use more current for more products)), rent of admin buildings  </div>
+    </div>
+    
+    <div class="flashcard" id="card-3" onclick="showAnswer(3)">
+        <div><strong>Question:</strong></div>
+        <div> What is the classic value creation process for standard software?</div>
+        <div class="answer" id="answer-3"><strong>Answer:</strong>   </div>
+    </div>
+    
+    <div class="flashcard" id="card-4" onclick="showAnswer(4)">
+        <div><strong>Question:</strong></div>
+        <div> What are marginal costs?</div>
+        <div class="answer" id="answer-4"><strong>Answer:</strong> “How much will the next unit cost?” Marginal costs refer to the additional cost incurred by producing one more unit of a good or service. Marginal revenue > Marginal costs -> worth producing more. Marginal cost = d Cost  / d Quantity.</div>
+    </div>
+    
+    <div class="flashcard" id="card-5" onclick="showAnswer(5)">
+        <div><strong>Question:</strong></div>
+        <div> With what perspectives can one look at the topic of "(IT) sourcing"?</div>
+        <div class="answer" id="answer-5"><strong>Answer:</strong>  IT sourcing can be viewed from the following perspectives:1. Types of cooperation: internal, external outsourcing or joint venture2. Direction of the shift: insourcing (doing it in house), outsourcing (assign a task to a third-party / company) and back-sourcing (bringing business processes back into company from outsourcers)3. Location: onsite, nearshore, offshore4. Number of service providers: single / multi sourcing (outsourcing with many more companies)Other criteria to take into account: communication costs, security.</div>
+    </div>
+    
+    <div class="flashcard" id="card-6" onclick="showAnswer(6)">
+        <div><strong>Question:</strong></div>
+        <div> When can a piece of software be called a product?</div>
+        <div class="answer" id="answer-6"><strong>Answer:</strong>  When it has an active life cycle management.</div>
+    </div>
+    
+    <div class="flashcard" id="card-7" onclick="showAnswer(7)">
+        <div><strong>Question:</strong></div>
+        <div> How high would you estimate the sales efficiency for an existing product in a new market?</div>
+        <div class="answer" id="answer-7"><strong>Answer:</strong> Market research on the characteristics of the new market must be first conducted: demand, brand recognition, cultural considerations, competition landscape, pricing strategies. Ideally data from a similar market can be used as a baseline for the sales efficiency. The global visibility of the brand should help in the sales process. Also, success stories from different markets should show a backing.Another idea would be to use gorilla marketing on a small potential customer base, to further assess the behaviour of the market (or conjoint analysis)</div>
+    </div>
+    
+    <div class="flashcard" id="card-8" onclick="showAnswer(8)">
+        <div><strong>Question:</strong></div>
+        <div> What is Income Statement? (When are these terms used in business accounting?)</div>
+        <div class="answer" id="answer-8"><strong>Answer:</strong>  Includes Proceeds and Costs</div>
+    </div>
+    
+    <div class="flashcard" id="card-9" onclick="showAnswer(9)">
+        <div><strong>Question:</strong></div>
+        <div> Why is the pricing of SaaS software so fundamentally different from that of on-premise software?</div>
+        <div class="answer" id="answer-9"><strong>Answer:</strong> Cloud providers invest a substantial amount into development and optimising their cloud infrastructure, so they can achieve low functioning and maintenance costs. They also benefit from the principle of “Economics of scale”. Because of this SaaS software uses a pay-as-you-go pricing and achieves good profit from it. On premise software pricing requires a big overhead in development and logistic costs and regular maintenance costs, which lacks granularity.</div>
+    </div>
+    
+    <div class="flashcard" id="card-10" onclick="showAnswer(10)">
+        <div><strong>Question:</strong></div>
+        <div> What is Risk Exposure?</div>
+        <div class="answer" id="answer-10"><strong>Answer:</strong>  Risk Exposure = P(certain_risk) * Effort(created_by_that_risk)</div>
+    </div>
+    
+    <div class="flashcard" id="card-11" onclick="showAnswer(11)">
+        <div><strong>Question:</strong></div>
+        <div> What levels of communication should you pay attention to during negotiations?</div>
+        <div class="answer" id="answer-11"><strong>Answer:</strong>  Levels of communication in negotiations are:1. Functional negotiation: about the functionalities of the software; done by the specialists department2. Technical negotiation: terms of the contract (penalties, acceptance criteria, payment plan)3. Textual negotiation: Written formulation (legal departments)4. Political negotiation: management level</div>
+    </div>
+    
+    <div class="flashcard" id="card-12" onclick="showAnswer(12)">
+        <div><strong>Question:</strong></div>
+        <div> What is the difference between Expenditures and Efforts?</div>
+        <div class="answer" id="answer-12"><strong>Answer:</strong> An Expenditure is Effort when decrease in financial assets = decrease in net worth (intereset payment to the bank). An Expenditure is not Effort when decrease in financial assets ! -> decrease in net worth (buy a property | the other stay untouched). An Effort is not an Expenditure when decrease in net worth is not decrease in financial assets (depreciation of a property / tangible asset)</div>
+    </div>
+    
+    <div class="flashcard" id="card-13" onclick="showAnswer(13)">
+        <div><strong>Question:</strong></div>
+        <div> How is a balance sheet roughly structured?</div>
+        <div class="answer" id="answer-13"><strong>Answer:</strong> It is derived from the inventory and it is a summarized version of the company’s assets and their financing at a point in time. It contains:1. Fixed assets (available for long term use by the company)2. Current assets (temporary assets to be used)3. Equity (net assets – liabilities) ; liabilities = debts = borrowed capitalAssets LiabilitiesUse of Funds Source of funds Sort them in order of liquidity.</div>
+    </div>
+    
+    <div class="flashcard" id="card-14" onclick="showAnswer(14)">
+        <div><strong>Question:</strong></div>
+        <div> Why do you need a business plan?</div>
+        <div class="answer" id="answer-14"><strong>Answer:</strong> A business plan acts as guideline for the business’ future. It defines clearly the business idea, the realization timetable, business system etc. Without a plan, a business is doomed to fail: successes and failures cannot be assessed, without milestones it is impossible to tell if you are on the right track, you cannot know if you are behind or on schedule etc.   Also for the investors to create interest. Is of interest to stakeholders, such as authorities (for approbation), lobby associations, rating companies etc.</div>
+    </div>
+    
+    <div class="flashcard" id="card-15" onclick="showAnswer(15)">
+        <div><strong>Question:</strong></div>
+        <div> Why are some success factors for management of software projects?</div>
+        <div class="answer" id="answer-15"><strong>Answer:</strong> - Management support- User involvement- Standardized software infrastructure- Clear business goals</div>
+    </div>
+    
+    <div class="flashcard" id="card-16" onclick="showAnswer(16)">
+        <div><strong>Question:</strong></div>
+        <div> What does the concept of the marketing mix involve?</div>
+        <div class="answer" id="answer-16"><strong>Answer:</strong> The marketing mix involves a combination of 4 elements that the business can control to influence consumer behaviour (4Ps):1. Product: design, features, quality, packaging etc.2. Price: consider pricing strategies, such as skimming, demand-oriented pricing3. Place (distribution): how the product is made available to clients i.e. logistics must make It easily accessible to clients4. Promotion: communication strategies  – What are the components of the product and service policy? The components are:1. Scope of services /product description (functionality, related services such as maintenance, documentation, training, installation)2. Product design3. Product planning (further developments)4. Product manufacturing (quality, standards etc.)5. Product presentation (demos, test licenses)– What are the components of distribution policy?o Territory segmentationo Distribution channelo Delivery policy: ensure delivery of service at the place and time of demando Demand creation policy: create demand at place and timeo Key Account Management: create a dedicated team who deals with distribution for one single customer (one face to the customer)– What are the components of contracting and communication policy? Contracting policy: Additional payments to sales agents on better performances or short sales cyclesCommunication policy: Preparation: gather info about the market, demand, target groups Lobbying Product placement (movies, shows) Public relations actions: events, sponsorships, donations etc.</div>
+    </div>
+    
+    <div class="flashcard" id="card-17" onclick="showAnswer(17)">
+        <div><strong>Question:</strong></div>
+        <div> What is Amortization?</div>
+        <div class="answer" id="answer-17"><strong>Answer:</strong>  Amortization is the process of spreading the cost of an asset over its useful life.</div>
+    </div>
+    
+    <div class="flashcard" id="card-18" onclick="showAnswer(18)">
+        <div><strong>Question:</strong></div>
+        <div> How can economics be sorted into the existing academic canon?</div>
+        <div class="answer" id="answer-18"><strong>Answer:</strong> Economics is part of the Economics and social sciences group and can be further divided into Business Economics (Microeconomics) and National Economics (Macroeconomics).</div>
+    </div>
+    
+    <div class="flashcard" id="card-19" onclick="showAnswer(19)">
+        <div><strong>Question:</strong></div>
+        <div> Why do you need target costing or zero-base budgeting?</div>
+        <div class="answer" id="answer-19"><strong>Answer:</strong> Target costing = calculation of the maximum costs of the production process of a product for the target return / revenue. Needed to recalculate the individual cost components of the product to fit the given target revenueZero-based costing/ budgeting = involves recalculation of costs from scratch instead of incremental updates based on previous costs. Comparing the new calculations of costs with the incremental one can help estimate redundancies and eliminate them </div>
+    </div>
+    
+    <div class="flashcard" id="card-20" onclick="showAnswer(20)">
+        <div><strong>Question:</strong></div>
+        <div> What is Payment?</div>
+        <div class="answer" id="answer-20"><strong>Answer:</strong>  Decrease in cash + cash equiv</div>
+    </div>
+    
+    <div class="flashcard" id="card-21" onclick="showAnswer(21)">
+        <div><strong>Question:</strong></div>
+        <div> What classic elements does it contain?</div>
+        <div class="answer" id="answer-21"><strong>Answer:</strong> -The business idea, the actual project-The team (founding partners and their skills previous experience, key people, advisors)- The addressed market: target customers, expected behaviour, market size, competitors (+/-) - The business system: organizational structure of the business (personnel planning, purchasing strategy etc.) e.g.: b2b- Financial planning (and therefore also the legal form)- The timetable (realization schedule with milestones)</div>
+    </div>
+    
+    <div class="flashcard" id="card-22" onclick="showAnswer(22)">
+        <div><strong>Question:</strong></div>
+        <div> Which actors play a role in software development?</div>
+        <div class="answer" id="answer-22"><strong>Answer:</strong> - Software manufacturer (main)- Cloud provider- Subcontractors (offshoring)- Competitors- End-user</div>
+    </div>
+    
+    <div class="flashcard" id="card-23" onclick="showAnswer(23)">
+        <div><strong>Question:</strong></div>
+        <div> What is the main component of performance: motivators of hygiene factors?</div>
+        <div class="answer" id="answer-23"><strong>Answer:</strong>  The main component of performance are motivators.</div>
+    </div>
+    
+    <div class="flashcard" id="card-24" onclick="showAnswer(24)">
+        <div><strong>Question:</strong></div>
+        <div> Which contract types are relevant in software business?</div>
+        <div class="answer" id="answer-24"><strong>Answer:</strong> 1. License agreement: It grants the user the right to use the software under specific terms and conditions. Outlines the scope of use, limitations, and any restrictions on how the software can be used.i. Not regulated by lawii. Intellectual property remains with the software manufactureriii. Sales can be realised immediately (on the manufacturer side)iv. Costs can be capitalized immediately (on the user side)2. Contract for work: creation / modification of a software.i. Has legal basis in Germanyii. Whereabouts of the intellectual property to be negotiatediii. Success in terms of content is owed (software functionality must be formally accepted)3. EULA (END USER LICENSE AGREMENT): EULAs typically cover issues such as the number of installations allowed, restrictions on copying or distributing the software, disclaimers of warranty, and limitations of liability. Users usually agree to the terms of the EULA before installing or using the software.i. not regulated by lawii. no acquisition of intellectual propertyiii. restricted right of use (to computers, users). Also may be time bound4. Service Contract: contractor provides activity, does not guarantee success (e.g. consulting, coaching)i. Has legal basis5. General terms and conditions: </div>
+    </div>
+    
+    <div class="flashcard" id="card-25" onclick="showAnswer(25)">
+        <div><strong>Question:</strong></div>
+        <div> Why do you need portfolio management?</div>
+        <div class="answer" id="answer-25"><strong>Answer:</strong> Portfolio management = managing all ongoing projects and how they relate / interact to each other or how they share the resources of the companyMotivation: looking at individual projects does not show correlations / dependencies to other projects. We may have:1. Investment correlations: a. Resource dependencies: computing power is used in Project B rn (or senior personnel)b. Structural dependencies: output from Project A is needed for Project B 2. Temporal dependencies:a. Project A needs to be finished before starting working on Project Bb. Dependence on technology.IT Portfolio Management does the allocation of IT budget, control project dependencies. Dependent projects can be clustered together, IT PM also takes care of selecting suitable projects.</div>
+    </div>
+    
+    <div class="flashcard" id="card-26" onclick="showAnswer(26)">
+        <div><strong>Question:</strong></div>
+        <div> What is Coopetition?</div>
+        <div class="answer" id="answer-26"><strong>Answer:</strong> Coopetition is the situation when two companies work together in one area but are competitors in another. For example, Intel and AMD worked together to create the specifications for the USB standard, but they are competitors in the CPU market. Most of the times working together means standardization of some sorts.</div>
+    </div>
+    
+    <div class="flashcard" id="card-27" onclick="showAnswer(27)">
+        <div><strong>Question:</strong></div>
+        <div> What is Proceeds?</div>
+        <div class="answer" id="answer-27"><strong>Answer:</strong>  Proceeds is profit from operating business activities. Increase in Assets necessary for business operation</div>
+    </div>
+    
+    <div class="flashcard" id="card-28" onclick="showAnswer(28)">
+        <div><strong>Question:</strong></div>
+        <div> What leadership styles do you know?</div>
+        <div class="answer" id="answer-28"><strong>Answer:</strong>  Authoritarian vs Democratic (First dimension)Authoritarian = decisions are mainly taken by management and then communicated to the employees, without any room for negotiation or feedback. Democratic = decisions are the result of communication, voting and the opinion of the majority of employees OR employees take independent decisions in their framework conditions.Or a combination of both: o The leadership proposes decisions which are open for question and further refined after feedbacko The leadership sells the decisionRelationship-oriented vs results-oriented  Motivators versus hygiene factors (extrinsic vs intrinsic motivators) Intrinsic motivators (within the individual): Autonomy Opportunity for self growth and development Feedback on performance Sense of accomplishmentExtrinsic motivators (external sources): Praise from superiors Pressure Promotion Bonuses</div>
+    </div>
+    
+    <div class="flashcard" id="card-29" onclick="showAnswer(29)">
+        <div><strong>Question:</strong></div>
+        <div> What atypical aspects should be taken into account when scheduling software projects?</div>
+        <div class="answer" id="answer-29"><strong>Answer:</strong> 1. Managerial aspectsa. Time for contract negotiationsb. Time for acceptance of the software (e.g. tests on the client side)2. Quality assurance aspects:a. Time to develop a common understanding of the quality assurance process or non-functional Requirements3. Software development aspects:a. Time for knowledge building about this particular project (aspects that need to be learned)4. Integration of third-party companiesa. E.g. when outsourcing certain functionalities, check for overlapping activities, takes time</div>
+    </div>
+    
+    <div class="flashcard" id="card-30" onclick="showAnswer(30)">
+        <div><strong>Question:</strong></div>
+        <div> What are motivators and hygiene factors?</div>
+        <div class="answer" id="answer-30"><strong>Answer:</strong> Motivators = factors that may increase satisfaction of the employees, but when perceived as not ok do not create dissatisfaction (e.g. recognition, meaningful work, advancement opportunities)Hygiene factors = factors that when present avoid dissatisfaction but not increase satisfaction (e.g. salary, benefits, working environment, work-life balance)</div>
+    </div>
+    
+    <div class="flashcard" id="card-31" onclick="showAnswer(31)">
+        <div><strong>Question:</strong></div>
+        <div> What is the "tipping point" approach to change management?</div>
+        <div class="answer" id="answer-31"><strong>Answer:</strong> Not totally sure. Was probably discussed in the course. Unlike the classical approach where one tries to make the majority of employees adapt a change, in the tipping point approach key influencers become early adopters of the change and then influence others, until a tipping point is reached and the change becomes self-sustainable. The idea is that certain key influencers play a big role in influencing trends within a company, they are trusted and respect by colleagues and their influence can bubble up to create a t</div>
+    </div>
+    
+    <div class="flashcard" id="card-32" onclick="showAnswer(32)">
+        <div><strong>Question:</strong></div>
+        <div> Give at least 3 examples of different types of cost accounting. How do they differ?</div>
+        <div class="answer" id="answer-32"><strong>Answer:</strong> 1. Cost type accounting: breakdown of costs by cause of consumption: property costs (e.g. rent or leasing machines), personnel costs, information costs (data collection, research etc.)2. Cost center accounting: breakdown of costs by organizational units / departments. Each organizational unit is assigned to a cost center. a. Cost centers can be: main (for departments that are directly tied to the production process), secondary (for departments that are involved In product preprocessing and post-processing e.g: delivery and logistics departments) and auxiliary (for departments that provide services to the entire company, e.g.: IT department)b. Cost centers can be: pre-cost centers (for common costs) and final cost centers (final allocation of costs)3. Cost object accounting: breakdown of costs by product / process. Types:a. Product cost accounting: accumulate costs related to a specific product (direct materials, labour and manufacturing overhead).i. Primary products: the main product of the companyii. Co-products: other products produced from producing the main product (on purpose and effort is made to sell this) (e.g. sawdust for processing wood)iii. Secondary products: generated incidentally from the production process, don’t really have value (e.g. waste)b. Process cost accounting: accumulate costs related to a specific process (in industries where there is a continuous repetitive process. E.g: food processing, oil refining, chemicals, producer of fertilizer)</div>
+    </div>
+    
+    <div class="flashcard" id="card-33" onclick="showAnswer(33)">
+        <div><strong>Question:</strong></div>
+        <div> What are the minimum conditions of open-source software?</div>
+        <div class="answer" id="answer-33"><strong>Answer:</strong> Free transparent source code, free redistribution, software not tied to specific hardware manufacturers</div>
+    </div>
+    
+    <div class="flashcard" id="card-34" onclick="showAnswer(34)">
+        <div><strong>Question:</strong></div>
+        <div> How would you price outsourcing services?</div>
+        <div class="answer" id="answer-34"><strong>Answer:</strong>  Usually via a lump sum:1. Price them the same as the costs associated with client’s employees managing the system2. Price them based on IT department’s business processes to be mapped3. Price them based on target costing: client sets maximum permitted costs and outsourcing provider controls their costs to stay in the permitted limit</div>
+    </div>
+    
+    <div class="flashcard" id="card-35" onclick="showAnswer(35)">
+        <div><strong>Question:</strong></div>
+        <div> What is the main difference between HGB accounting and US GAAP or IFRS accounting?</div>
+        <div class="answer" id="answer-35"><strong>Answer:</strong> Main differences could be: where the company operates (Germany, US or international). What statements are needed for accounting: HGB Balance Sheet and P&L statement, others these + Cash flow statement + Change in equity statement.HGB accounting consists of Balance Sheet and P&L statement; content reviewed by auditors; designed by German lawmakersUS-GAAP: consists of Balance Sheet, P&L statement, Cash Flow statement, Statement of changes in equity and further notes; content reviewed by Securities and Exchange Commission; designed by a private association of the US business committeeIFRS: it’s a set of international accounting standards; consists of Balance Sheet, P&L statement, statement for change in equity, Cash Flow statement</div>
+    </div>
+    
+    <div class="flashcard" id="card-36" onclick="showAnswer(36)">
+        <div><strong>Question:</strong></div>
+        <div> What is the difference between Earnings and Proceeds?</div>
+        <div class="answer" id="answer-36"><strong>Answer:</strong> An Earning is a Proceed when an increase in net worth = increase in Assets necessary for business operation. An Earning is not a proceed when net worth increases unrelated to business operation (stock prices go up). Proceeds are not earning when assets for business operation increase unrelated to net worth (a new patent is developed in the company for self-use).</div>
+    </div>
+    
+    <div class="flashcard" id="card-37" onclick="showAnswer(37)">
+        <div><strong>Question:</strong></div>
+        <div> How would you prepare for an upcoming negotiation?</div>
+        <div class="answer" id="answer-37"><strong>Answer:</strong> - Clear distinction between personal opinions and negotiating opinion- Separation between personal provocation and negotiation provocation- Success also means letting the other person end the negotiation with dignity- Define a BATNA (Best Alternative to Negotiated Agreement): represents the course of action to take if an agreement cannot be reached- Negotiate toward long-term success of the project, even if they may look like looses in the short-term </div>
+    </div>
+    
+    <div class="flashcard" id="card-38" onclick="showAnswer(38)">
+        <div><strong>Question:</strong></div>
+        <div> What does market segmentation look like and what is it good for?</div>
+        <div class="answer" id="answer-38"><strong>Answer:</strong> The purpose of market segmentation is the division of the overall market into homogeneous segments, each with the same market reactions, with the purpose of a better focused market development approaches tailored for each segment. Market segmentation can be:1. Functional segmentation: different form and quality preferences per segments (e.g. Algida uses better raw materials for ice-cream destined for Italy)2. Cultural / socio-demographic segmentation: segment based on education, lifestyle, income , age, gender3. Spatial: by country / region influenced by local cultural aspectsAn example of socio-demographic segmentation is tailoring user interface on a product based on the education of the users.</div>
+    </div>
+    
+    <div class="flashcard" id="card-39" onclick="showAnswer(39)">
+        <div><strong>Question:</strong></div>
+        <div> How can profit shifting occur in international companies?</div>
+        <div class="answer" id="answer-39"><strong>Answer:</strong> </div>
+    </div>
+    
+    <div class="flashcard" id="card-40" onclick="showAnswer(40)">
+        <div><strong>Question:</strong></div>
+        <div> How would you plan and implement maintaining the value of existing software?</div>
+        <div class="answer" id="answer-40"><strong>Answer:</strong> First assess the current software in comparation with competitor products. Document its features, architecture, technology stack and existing limitations.Optionally conduct a survey to gather user feedback on improvements.Create a knowledge base about new technologies and trends.NOT DONE COME BACK</div>
+    </div>
+    
+    <div class="flashcard" id="card-41" onclick="showAnswer(41)">
+        <div><strong>Question:</strong></div>
+        <div> How can you enforce the same price with different willingness to pay?</div>
+        <div class="answer" id="answer-41"><strong>Answer:</strong> 1. Price and product bundling  2. Artificial Scarcity: restrict the availability of the product to increase value (may increase price but also unethical and bad publicity = distrust)3. Moon prices: show discount from greater price to actual price (although it may be none)4. Name your own price: model used in auctions</div>
+    </div>
+    
+    <div class="flashcard" id="card-42" onclick="showAnswer(42)">
+        <div><strong>Question:</strong></div>
+        <div> Mention the names the components that make up the value of an object. What views, perspectives and dimensions should be considered?</div>
+        <div class="answer" id="answer-42"><strong>Answer:</strong> Components that make up the value of an object are: Qualitative components (e.g. prestige, innovation power), Quantifiable value constituents (e.g. number of error messages, no of lines of code) and Monetizable components (e.g. production costs that come from prime materials) . The dimensions that should be considered are: Relativity, Dynamics, Quantifiability and Monetizability.Relativity = concept of value is defined relative to other objectsDynamics = value is dependent of timeQuantifiability = some component of value cannot be quantified (bright ideas about functions of the product, number of thought etc.)Monetizability = some component of value cannot be value monetarilyPerspectives/views that should be considered are:  value is the result of creation process and (backward view) and value is potential to use the that object for future creation of another value object (future view / also very capitalistic)</div>
+    </div>
+    
+    <div class="flashcard" id="card-43" onclick="showAnswer(43)">
+        <div><strong>Question:</strong></div>
+        <div> What is IT governance or Managerial IT Accounting?</div>
+        <div class="answer" id="answer-43"><strong>Answer:</strong> IT governance is leadership, organizational structures and processes to ensure that the organisation's IT sustains and extends the organisation's strategies and objectives.IT governance is process of ensuring that the IT investments support business objectives.Managerial Accounting is identification, measurement, analysis, and interpretation of accounting information so that it can be used to help managers make informed operational decisions.Managerial IT Accounting has the following tasks:1. Planninga. Do IT reporting and KPIs2. Plan IT process and establish regulationsThe fuck do I know really.</div>
+    </div>
+    
+    <div class="flashcard" id="card-44" onclick="showAnswer(44)">
+        <div><strong>Question:</strong></div>
+        <div> What does contribution margin accounting look like? Why do you need it?</div>
+        <div class="answer" id="answer-44"><strong>Answer:</strong> Contribution margin accounting involves analysing contribution margin for a product (product revenue – variable costs) to assess profitability. Further, it continues to break-even analysis which determines the break-even point of a product. The break-even point is the point (in volume) where the production starts to be profitable (the total contribution margin = fixed costs). The analysis is needed to determine the volume of production for profitability. </div>
+    </div>
+    
+    <div class="flashcard" id="card-45" onclick="showAnswer(45)">
+        <div><strong>Question:</strong></div>
+        <div> What is Financial Accounting?</div>
+        <div class="answer" id="answer-45"><strong>Answer:</strong> Financial Accounting refers to activities in the company relate to monitoring the flow of money and services. It is also a legal requirement. Special aspects in the context of Software Companies are Intangible assets, Data Privacy, Freemium models or Global Operation.</div>
+    </div>
+    
+    <div class="flashcard" id="card-46" onclick="showAnswer(46)">
+        <div><strong>Question:</strong></div>
+        <div> What are the classic benefit, cost and risk potentials that influence the value of software?</div>
+        <div class="answer" id="answer-46"><strong>Answer:</strong>  The classic benefit potentials that influence the value of software are:1. Enabling some business processes that are only possible with software (e.g. Resource planning)2. Increased productivity3. Support for expansion (scalability of software)4. Support for modularization (of business units)5. Enabling network effectsThe cost (efforts) potentials that influence the value of software are: Manufacturer’s view:1. Costs for adding new functionality to the software2. Costs for program knowledge acquisition (learning about how to develop that project)3. Costs for maintaining legacy systems4. Costs related to customer management5. Exploration costs (R&D) & Experiments costs (Costs after a Revision)6. opportunity costs: from not implementing certain functionalities (Costs after a Revision)User’s view:1. Service Fees for using the software2. Consultancy fees if external expertise is needed3. Operating costs4. Modification costs to adapting the user processes to the new version of the software (Costs after a Revision)5. Training and education costs to familiarize users with the change (Costs after a Revision)The risk potentials that influence the value of software are:  Manufacturer’s view:1. Inappropriate technology stack2. Unexpected high complexity3. Unexpected high costs4. Unexpected delays5. Lack of prepared personnel for that project6. Missing equipment / resources (e.g. GPUs for training, certain permits)User’s view:1. Functionality, performance, quality not as expected2. Software is not intuitive and is hard to use in the context3. The expected benefits cannot be achieved with the software4. The software does not meet the legal requirements5. The software is limited in its using</div>
+    </div>
+    
+    <div class="flashcard" id="card-47" onclick="showAnswer(47)">
+        <div><strong>Question:</strong></div>
+        <div> What is price elasticity?</div>
+        <div class="answer" id="answer-47"><strong>Answer:</strong>  Price elasticity is the percentage by which sales change if the price is changed by 1%. d Sales / d Price with h = 1%</div>
+    </div>
+    
+    <div class="flashcard" id="card-48" onclick="showAnswer(48)">
+        <div><strong>Question:</strong></div>
+        <div> What challenges do you face when setting up a new company?</div>
+        <div class="answer" id="answer-48"><strong>Answer:</strong>  Challenges can be:- Gathering market data- Convincing investors- Right time to enter the market- Legal issues- Talent acquisition: reliable employees - Risk management e.g. from inaccurate market data- Adaptability and flexibility to new unforeseen market conditions</div>
+    </div>
+    
+    <div class="flashcard" id="card-49" onclick="showAnswer(49)">
+        <div><strong>Question:</strong></div>
+        <div> What could be the challenges that make it difficult to determine the value of an object?</div>
+        <div class="answer" id="answer-49"><strong>Answer:</strong> 1. Temporal separation of potential and realization (you asses the value of the product in the future, but until you build it its value may change)2.  Causal Assignment of Service Components to Value Result (which action contributed in which way to the value of the product)3. Finding suitable metrics for value4. Being able to measure them accurately.5. Modelling the causal relationship between functions and value components6. Being inherently subjective when assessing the value of an object7. Isolation problem: is the benefit directly tied to this product or do more contribute?8. Intangibility: software is abstract and is harder to assess its value9. Uniqueness: specific products which lack comparable items are harder to value10. not assessable by everyone and not without further ado (group of people, background knowledge,11. cannot be captured well using traditional business management methods for capital goods</div>
+    </div>
+    
+    <div class="flashcard" id="card-50" onclick="showAnswer(50)">
+        <div><strong>Question:</strong></div>
+        <div> What is the difference between Marketing and Advertising?</div>
+        <div class="answer" id="answer-50"><strong>Answer:</strong>  Advertising in included in Marketing.</div>
+    </div>
+    
+    <div class="flashcard" id="card-51" onclick="showAnswer(51)">
+        <div><strong>Question:</strong></div>
+        <div> What is Managerial Accounting?</div>
+        <div class="answer" id="answer-51"><strong>Answer:</strong> Managerial Accounting involves management of planning, control, organization (hard and personnel) in an efficient way to achieve corporate goals. Special aspect for software companies are: Agile Development, which inquires a different track of resources and work at a sprint-to-sprint basis, Subscription and reccuring revenue models, Intellectual property management </div>
+    </div>
+    
+    <div class="flashcard" id="card-52" onclick="showAnswer(52)">
+        <div><strong>Question:</strong></div>
+        <div> In the context of dynamic licensing: What is the decisive "value object" of the customer? What will software providers favor? What will software users favor?</div>
+        <div class="answer" id="answer-52"><strong>Answer:</strong> The decisive “value object” of the customer if flexibility / granularity: they value to pay exactly for how much they have used and need and not be charged for services they do not require (as bundles). Software users will favor dynamic licensing per transaction volume, so that they pay exactly for what they consume when they need it and nothing when the software product is not used.Software providers will rather favor dynamic licensing per financial ratio, so that they get revenue regardless of how much they software product is used (for many software products, the computation / storage resources do not scale with the number of clients e.g. Photoshop) They would also favor bundling together offers and a freemium model.</div>
+    </div>
+    
+    <div class="flashcard" id="card-53" onclick="showAnswer(53)">
+        <div><strong>Question:</strong></div>
+        <div> How would you deal with a rejection of your decisions?</div>
+        <div class="answer" id="answer-53"><strong>Answer:</strong> Question and assess the reasoning behind the rejection. Ask if there are aspects that can be changed so that the decision can pass. Assess if these aspects are acceptable. Negotiate further terms. If no acceptable conclusion is reached, accept the chain of command.See strategies to avert rejection: slide TODO</div>
+    </div>
+    
+    <div class="flashcard" id="card-54" onclick="showAnswer(54)">
+        <div><strong>Question:</strong></div>
+        <div> What is a Conjoint Analysis?</div>
+        <div class="answer" id="answer-54"><strong>Answer:</strong> Conjoint Analysis is a survey in which individual characteristics of the product are broken down (e.g: screen size, price range, battery life, GB of RAM) and fed to the participants in order to assess which properties are the most important (generate the most variation) or how is the individual weight of each property to the value of the product. It shows which properties should be prioritized in the development process.</div>
+    </div>
+    
+    <div class="flashcard" id="card-55" onclick="showAnswer(55)">
+        <div><strong>Question:</strong></div>
+        <div> You will be appointed as a company's risk manager. What tasks do you see as your</div>
+        <div class="answer" id="answer-55"><strong>Answer:</strong> responsibility?Identify the most common associated risks with the development process (e.g. client changing preferences, AWS prices going up/down, cloud downtime, unexpected migration errors) and try to estimate their probability of happening. Estimate a provisional budget based on the risk surcharge factor for most probable high-impact risks. Create a Risk Mitigation Plan to minimize the probability of certain types of risks: monitor defined metrics (such as risk exposure, risk surcharge factor, risk tolerance, risk mitigation effectiveness, risk cost/benefit ratio).</div>
+    </div>
+    
+    <div class="flashcard" id="card-56" onclick="showAnswer(56)">
+        <div><strong>Question:</strong></div>
+        <div> What is the difference between a Balance Sheet and a Profit and Loss statement?</div>
+        <div class="answer" id="answer-56"><strong>Answer:</strong> A balance sheet is just a snapshot of Assets and Liabilities at a point in time. Profit and Loss statement summarizes the revenues (credit), costs and expenses (debit) during a period of time.</div>
+    </div>
+    
+    <div class="flashcard" id="card-57" onclick="showAnswer(57)">
+        <div><strong>Question:</strong></div>
+        <div> What is Cash and Cash equivalents?</div>
+        <div class="answer" id="answer-57"><strong>Answer:</strong>  Cash + bank balances</div>
+    </div>
+    
+    <div class="flashcard" id="card-58" onclick="showAnswer(58)">
+        <div><strong>Question:</strong></div>
+        <div> What are "hidden reserves" and how can they be built up?</div>
+        <div class="answer" id="answer-58"><strong>Answer:</strong> Hidden reserves are undisclosed profits or assets that a company sets aside on its balance sheet. These reserves are not reported in the company’s financial statements and not disclosed to the public. Their purpose is to strengthen the company’s financial position without disclosing the full extent of profits. They arise from pessimistic evaluation or overevaluation of debts. Hidden reserves occur from depreciation of currency, valuation of provisions, other forms of depreciation etc. They also exist to protect creditors (legislation)</div>
+    </div>
+    
+    <div class="flashcard" id="card-59" onclick="showAnswer(59)">
+        <div><strong>Question:</strong></div>
+        <div> Why do managers often find it difficult to implement changes?</div>
+        <div class="answer" id="answer-59"><strong>Answer:</strong> - Feeling of loosing control / power- Fear of loss of reputation / credibility because their methods have been questioned- Skepticism regarding the need for change / impact of the change- Inertia in outdated methods  </div>
+    </div>
+    
+    <div class="flashcard" id="card-60" onclick="showAnswer(60)">
+        <div><strong>Question:</strong></div>
+        <div> What is the basis of Managerial Accounting?</div>
+        <div class="answer" id="answer-60"><strong>Answer:</strong> Quantitative Data (monetary e.g development costs and non-monetary e.g availability to solve incidents) and Qualitative Data (e.g. user satisfaction, user engagement)</div>
+    </div>
+    
+    <div class="flashcard" id="card-61" onclick="showAnswer(61)">
+        <div><strong>Question:</strong></div>
+        <div> In your view, are there any benefits missing here? (in the context of benefits of software)</div>
+        <div class="answer" id="answer-61"><strong>Answer:</strong> Prestige: companies that implement performant software are more likely to be chosen by their clients (think of how any company todays uses the word AI in their software products to attract more customers)Iterative Value Evolution: as software products get updated over time (many times without any additional cost, in the fear of loosing the client base, e.g. switching from key-word search to vector search for a db service or increasing the no of parameters of a model used for OCT), the company that uses the software also benefits</div>
+    </div>
+    
+    <div class="flashcard" id="card-62" onclick="showAnswer(62)">
+        <div><strong>Question:</strong></div>
+        <div> What is Profit?</div>
+        <div class="answer" id="answer-62"><strong>Answer:</strong>  Profit (or Contribution Margin 2) is Contribution Margin 1 – fixed costs. Scenario:  Price per prod: 100  Variable costs per prod: 60 (of 100)  Sales: 1M  Fixed Costs = 30M  Turnover = 100 * 1M  = 100M  Var costs = 60 * 1M = 60M  Contribution Margin 1 = turnover – var_costs = 100 – 60 = 40M  Profit = CM1 – fixed costs = 40M – 30M = 10M</div>
+    </div>
+    
+    <div class="flashcard" id="card-63" onclick="showAnswer(63)">
+        <div><strong>Question:</strong></div>
+        <div> What is a capitalization of assets?</div>
+        <div class="answer" id="answer-63"><strong>Answer:</strong> Capitalization of assets is an accounting practice of treating certain expenses as investments (spreading the cost over its useful life), instead of immediate costs on the income statement (add purchase to balance sheet).</div>
+    </div>
+    
+    <div class="flashcard" id="card-64" onclick="showAnswer(64)">
+        <div><strong>Question:</strong></div>
+        <div> What does the Kano model look like and what are enthusiasm factors? </div>
+        <div class="answer" id="answer-64"><strong>Answer:</strong> -  - Enthusiasms requirements are characteristics that offer a lot of satisfaction and are considered new and exciting and do not represent a fundamental necessity. They offer satisfaction even if they are not fully fulfilled or completed.</div>
+    </div>
+    
+    <div class="flashcard" id="card-65" onclick="showAnswer(65)">
+        <div><strong>Question:</strong></div>
+        <div>What is business accounting?</div>
+        <div class="answer" id="answer-65"><strong>Answer:</strong> Business accounting is responsible for recording of all cash and service flow through the company (in terms of quality and quantity), which are caused by the process of business activities. Determine the inventory & assets & liabilities of a company by type, quantity and value.</div>
+    </div>
+    
+    <div class="flashcard" id="card-66" onclick="showAnswer(66)">
+        <div><strong>Question:</strong></div>
+        <div> What is the difference between Deposit and Receipts?</div>
+        <div class="answer" id="answer-66"><strong>Answer:</strong> A deposit is a receipt when an increase in cash and equi = increase in financial assets (e.g selling a product in cash or instant payment). A deposit is not a receipt when an increase in cash is not an increase in financial assests (taking a loan). A Receipt is not a Deposit when an increase in financial assets in not an increase in cash or equivalent (e.g receivables, selling something on account)</div>
+    </div>
+    
+    <div class="flashcard" id="card-67" onclick="showAnswer(67)">
+        <div><strong>Question:</strong></div>
+        <div> What is a go-live-check (system analysis)?</div>
+        <div class="answer" id="answer-67"><strong>Answer:</strong> A go-live-check is an operation done right before going to “live production” where all the functionalities of the software are tested in a similar environment.</div>
+    </div>
+    
+    <div class="flashcard" id="card-68" onclick="showAnswer(68)">
+        <div><strong>Question:</strong></div>
+        <div> What does a typical surcharge calculation for estimating the project’s costs look like?</div>
+        <div class="answer" id="answer-68"><strong>Answer:</strong> 1. Estimate net development costs (100%)2. Surcharges are (percents of net development costs):a. Evaluationb. Documentationc. Designd. Teste. Warrantyf. Specificationg. Project Managementh. Translation3. Risk premium (percent of 1 + 2)PERT method can be used when multiple assessments are created: Likely = [best, expected, worst].t \dot [1/6, 4/6, 1/6]</div>
+    </div>
+    
+    <div class="flashcard" id="card-69" onclick="showAnswer(69)">
+        <div><strong>Question:</strong></div>
+        <div> What are variable costs?</div>
+        <div class="answer" id="answer-69"><strong>Answer:</strong> Variable costs are costs that occur depending on the quantity of the product (production unit materials costs: e.g. building cars requires 4 tires / car).</div>
+    </div>
+    
+    <div class="flashcard" id="card-70" onclick="showAnswer(70)">
+        <div><strong>Question:</strong></div>
+        <div> What is Balance Sheet? (When are these terms used in business accounting?)</div>
+        <div class="answer" id="answer-70"><strong>Answer:</strong>  Includes Earnings – Efforts. Measures success.</div>
+    </div>
+    
+    <div class="flashcard" id="card-71" onclick="showAnswer(71)">
+        <div><strong>Question:</strong></div>
+        <div> What is a Balance Sheet?</div>
+        <div class="answer" id="answer-71"><strong>Answer:</strong> Includes Earnings – Efforts. Measures success. Is derived from the inventory.</div>
+    </div>
+    
+    <div class="flashcard" id="card-72" onclick="showAnswer(72)">
+        <div><strong>Question:</strong></div>
+        <div> Why are the dimensions of IT portfolio management?</div>
+        <div class="answer" id="answer-72"><strong>Answer:</strong>  Qualitative: When selecting a new project, check for fitness in current business strategy Quantitative: What is the return on investment?  Thrust directions: post PFM: cluster, ante PFM: select suitable  </div>
+    </div>
+    
+    <div class="flashcard" id="card-73" onclick="showAnswer(73)">
+        <div><strong>Question:</strong></div>
+        <div> What is the difference between Efforts and Costs?</div>
+        <div class="answer" id="answer-73"><strong>Answer:</strong> An Effort is a Cost when a decrease in Net worth is also consumption of values during the creation of operational business activities (e.g regular production costs). An Effort is not a cost when decrease in net worth is not consumption of values during creating process (donation to red cross). A Cost is not an effort when net worth does not decrease during the creation process (issuance of dividend = share profit with shareholders in the form of cash or additional stocks). </div>
+    </div>
+    
+    <div class="flashcard" id="card-74" onclick="showAnswer(74)">
+        <div><strong>Question:</strong></div>
+        <div> What specifics should be taken into account when pricing consulting services?</div>
+        <div class="answer" id="answer-74"><strong>Answer:</strong> We should take into account billing rate (/hour /day /week or 24/7), qualification of consultants (Associate consultant -> Senior Consultant -> Principal Consultant ; charge per seniority and expertise) the type of consulting (on application, on technology, on IT strategy) + ancillary costs (not really necessary in the case of software consulting).</div>
+    </div>
+    
+    <div class="flashcard" id="card-75" onclick="showAnswer(75)">
+        <div><strong>Question:</strong></div>
+        <div> What is depreciation?</div>
+        <div class="answer" id="answer-75"><strong>Answer:</strong> Depreciation is the process of loss of value of an asset through use. Depreciation can be technical (wear, tear, accidental damage), economic (bad investment) or time-related (expiry of patents, concessions)Straight-line depreciation: evenly distributed the cost of the asset over its useful lifeDeclining-balance depreciation: as in poisson distribution (e^-x)Progressive balance depreciation: adjust the value of asset each year</div>
+    </div>
+    
+    <div class="flashcard" id="card-76" onclick="showAnswer(76)">
+        <div><strong>Question:</strong></div>
+        <div> What is Pareto Optimality?</div>
+        <div class="answer" id="answer-76"><strong>Answer:</strong> Pareto Optimality is a term associated with game theory. In a non-zero-sum multi-player game, a pareto optimality between all players is achieved when any move / action that would make one player better off will automatically make the others worse. In the context of Economics it shows an efficient (but not necessarily fair) distribution of resources. A Pareto Optimal state maximizes the gain for all parties involved.</div>
+    </div>
+    
+    <div class="flashcard" id="card-77" onclick="showAnswer(77)">
+        <div><strong>Question:</strong></div>
+        <div>What is the difference between Calculated quantity discount and Triggered volume discount?</div>
+        <div class="answer" id="answer-77"><strong>Answer:</strong>  Calculated quantity discount: discount is applied to all units  e.g: for over 300 untits discount is 30%. Base price is 100 -> you pay 70 per unit Triggered volume discount: discount applied to units in certain ranges with given discounts  Here average price per piece is 85 instead of 80, because 10% discount is applied to the first 100-199 for a price of 90 EUR and then 200-299 20% with a price of 80 EUR -> average is 85 EURFor the 30% discount we have: 30% for those over 300 so 70 EUR, 20 % for 200-299 and 10% for 100-199. So (90 + 80 + 70) / 3 = 80 EUR average per piece</div>
+    </div>
+    
+    <div class="flashcard" id="card-78" onclick="showAnswer(78)">
+        <div><strong>Question:</strong></div>
+        <div> What is a Joint Venture?</div>
+        <div class="answer" id="answer-78"><strong>Answer:</strong> Joint Venture = Business arrangement where more parties pool together resources and shar e profits to achieve a goal / project.</div>
+    </div>
+    
+    <div class="flashcard" id="card-79" onclick="showAnswer(79)">
+        <div><strong>Question:</strong></div>
+        <div> Is standard software the same as software product?</div>
+        <div class="answer" id="answer-79"><strong>Answer:</strong> Technically yes, but standard software has been adopted by a large user base and a software product has an active life cycle management </div>
+    </div>
+    
+    <div class="flashcard" id="card-80" onclick="showAnswer(80)">
+        <div><strong>Question:</strong></div>
+        <div> What are the main components of the management task?</div>
+        <div class="answer" id="answer-80"><strong>Answer:</strong> 1. Planninga. Setting goalsb. Plan operations, strategies and finances2. Personnela. Define work rolesb. Hire / fire personnelc. Renumeration and time managementd. Personal development of personnel3. Leadershipa. Define a vision for the companyb. Motivate employeesc. Take decisionsd. Mediate conflicts4. Organisationa. Define structure of companyb. Define processes of companyc. Define rules and regulations5. Managerial Accountinga. Projectsb. Infrastructurec. Finances</div>
+    </div>
+    
+    <div class="flashcard" id="card-81" onclick="showAnswer(81)">
+        <div><strong>Question:</strong></div>
+        <div> What are the different time phases in the value creation process? Name the differences</div>
+        <div class="answer" id="answer-81"><strong>Answer:</strong> between different perspectives. See slide 19/38 course 2.</div>
+    </div>
+    
+    <div class="flashcard" id="card-82" onclick="showAnswer(82)">
+        <div><strong>Question:</strong></div>
+        <div> What is the difference between an on-premise price calculation and a cloud price</div>
+        <div class="answer" id="answer-82"><strong>Answer:</strong> calculation?On premise price calculation involves much more upfront costs that cannot be amortized over the use of product (software licenses and hardware). On the other hand, cloud price calculation allows for a metered payment model and amortization of investment costs over a longer period of time. Nevertheless, in the long run cloud services add up to more costs that on-premise.</div>
+    </div>
+    
+    <div class="flashcard" id="card-83" onclick="showAnswer(83)">
+        <div><strong>Question:</strong></div>
+        <div> What influence can you have on the price with the pricing and conditions policy?</div>
+        <div class="answer" id="answer-83"><strong>Answer:</strong>  Pricing policies:1. Premium prices for luxury and prestige items or high quality requirements (tanks)2. Skimming prices (high price at the beginning if provider is first on the market and then drop it as competition emerges)3. Penetration prices: low to create network effect and gather customer base4. Freemium prices: free variant + premium featuresPrice differentiation based on: time of buying, where is it bought (geographical) and personal (segmentation of clientele by age, occupation proficiency etc.)Conditions policy: Discounts: Calculated quantity discount and Triggered volume Terms of delivery: right of exchange, return Terms of payment: Financing (in instalments) etc.</div>
+    </div>
+    
+    <div class="flashcard" id="card-84" onclick="showAnswer(84)">
+        <div><strong>Question:</strong></div>
+        <div> What other sales strategies do you know?</div>
+        <div class="answer" id="answer-84"><strong>Answer:</strong>  Other sales strategy include:o Farming strategy (nurture and develop long term relationship with the target market; focus on customer retention)o Hunting strategy (actively invest in seeking out potential leads; focus on customer acquisition)o Target selling (target a specific market category, focus on market segmentation)</div>
+    </div>
+    
+    <div class="flashcard" id="card-85" onclick="showAnswer(85)">
+        <div><strong>Question:</strong></div>
+        <div> What is Efforts?</div>
+        <div class="answer" id="answer-85"><strong>Answer:</strong>  Decrease in net worth</div>
+    </div>
+    
+    <div class="flashcard" id="card-86" onclick="showAnswer(86)">
+        <div><strong>Question:</strong></div>
+        <div> What are the usual components of annual financial statements?</div>
+        <div class="answer" id="answer-86"><strong>Answer:</strong> Balance Sheet, Cash Flow statement, Equity statement, Income statement (Profit and loss statement)</div>
+    </div>
+    
+    <div class="flashcard" id="card-87" onclick="showAnswer(87)">
+        <div><strong>Question:</strong></div>
+        <div>How would you calculate a risk premium factor?</div>
+        <div class="answer" id="answer-87"><strong>Answer:</strong> Risk premium factor is the difference between a risky return and a risk free return and measures the excess return that is required to compensate for being subjected to a risk.</div>
+    </div>
+    
+    <div class="flashcard" id="card-88" onclick="showAnswer(88)">
+        <div><strong>Question:</strong></div>
+        <div> What is Financial Assets?</div>
+        <div class="answer" id="answer-88"><strong>Answer:</strong>  Cash + bank balances + receivables (on account) – debts</div>
+    </div>
+    
+    <div class="flashcard" id="card-89" onclick="showAnswer(89)">
+        <div><strong>Question:</strong></div>
+        <div> What are Earnings?</div>
+        <div class="answer" id="answer-89"><strong>Answer:</strong> Earnings is increase in net worth (financial assets + tangible property e.g: land, computers etc.)</div>
+    </div>
+    
+    <div class="flashcard" id="card-90" onclick="showAnswer(90)">
+        <div><strong>Question:</strong></div>
+        <div> What is closed-loop marketing good for?</div>
+        <div class="answer" id="answer-90"><strong>Answer:</strong> Closed loop marketing is the analysis of individual successful marketing activities in order to optimize marketing strategies. Data is collected and analysed to illustrate event costs / resulting sales and other metrics. Supplemented by a competitive analysis.</div>
+    </div>
+    
+    <div class="flashcard" id="card-91" onclick="showAnswer(91)">
+        <div><strong>Question:</strong></div>
+        <div> What basic pricing strategies do you know?</div>
+        <div class="answer" id="answer-91"><strong>Answer:</strong> Cost-Oriented pricing: production costs + profit margin. Lower price limit is determined by the break-even point (in terms of volume).  Goal: cost leadership = become lowest-cost producer in the industry.Demand-oriented pricing: Price the product differently based on how much different groups of customers are willing to pay (in the case of software this would translate to freemium (or do conjoint analysis to determine which functionalities to offer for a higher price))</div>
+    </div>
+    
+    <div class="flashcard" id="card-92" onclick="showAnswer(92)">
+        <div><strong>Question:</strong></div>
+        <div></div>
+        <div class="answer" id="answer-92"><strong>Answer:</strong> </div>
+    </div>
+    
+    <div class="flashcard" id="card-93" onclick="showAnswer(93)">
+        <div><strong>Question:</strong></div>
+        <div> What product-related forms of company mergers are you familiar with?</div>
+        <div class="answer" id="answer-93"><strong>Answer:</strong>  Company mergers can be viewed as:  By organizational view: 1. Mergera. Absorption: one company absorbs the otherb. New foundation: new company is created2. Group consolidationa. Asset Deal: buyer gets individual assets from seller (the seller still owns his company)b. Share Deal: buyer gets shares of seller (and everything about the company, assets, rights, liabilities, obligations) By performance view:1. Horizontal:a. With product expansion (new products)b. Without product expansion2. Verticala. Backward integration: better access to procurement marketsb. Forward integration: better access to sales markets3. Conglomerate: New Business fieldsMergers achieve network effects</div>
+    </div>
+    
+    <div class="flashcard" id="card-94" onclick="showAnswer(94)">
+        <div><strong>Question:</strong></div>
+        <div> What is meant by a "lead", "collateral"?</div>
+        <div class="answer" id="answer-94"><strong>Answer:</strong> A lead is a potential customer (because they have expressed interest in the software product or service e.g.: visited the website, filled a contact form, subscribed to a newsletter).Collaterals in the context of software marketing are any materials used to promote the software product or service (e.g.: print media, success stories, participation in trade fairs)Clipping is the mentioning of the product service in a public environment.</div>
+    </div>
+    
+    <div class="flashcard" id="card-95" onclick="showAnswer(95)">
+        <div><strong>Question:</strong></div>
+        <div> What is liquidity?</div>
+        <div class="answer" id="answer-95"><strong>Answer:</strong> It is a measure of how easily an asset can be converted to cash without significant change is price (bought / sold on the market). High liquidity assets are stocks of large companies (e.g. Amazon). Low liquidity assets are real estates.</div>
+    </div>
+    
+    <div class="flashcard" id="card-96" onclick="showAnswer(96)">
+        <div><strong>Question:</strong></div>
+        <div> What is the difference between conclusion oriented, implementation oriented and investigative negotiation?</div>
+        <div class="answer" id="answer-96"><strong>Answer:</strong> Conclusion oriented investigation: Getting the most favourable contract agreement is the most important part. “The end justify the means”. Characterized by intensive negotiation, usually used in license negotiation. Strategies:o Suddenly bringing new information to the table / withholding informationo Bring up new problems at the end of the talko Threaten escalation, make a now or never offero Include contractual penalties for protectionInvestigative oriented negotiation: underlying assumption is that concluding a contract with the greatest possible value does not depend on the ability to persuade but on the ability to listen. Identify the underlying motifs for the other’s part demand. Approach characterized by flexibility, patience, creating common ground, understanding external constraints of both parties. Based on the principal of coopetition. In case of rejection, ask immediately what would have made the agreement possible.Implementation oriented negotiation: The focus is on implementing the contract afterwards, the most important part is the implementation of the contract and the successful completion. Result is not a contract but a method to create value on both sides. Characterized by:o long negotiation processo detailed contract documentso many negotiating participantso used for long-term projects (like building a campus) or for outsourcing agreementsStrategy elements:o put together a starter packageo openly discuss mutual interestso define a joint communication strategyo define interim milestones to check the progresso agree on negotiation guideline z.b. “all information for negotiation must be available 48h before the meeting”</div>
+    </div>
+    
+    <div class="flashcard" id="card-97" onclick="showAnswer(97)">
+        <div><strong>Question:</strong></div>
+        <div> What is the difference between single costs and common costs?</div>
+        <div class="answer" id="answer-97"><strong>Answer:</strong> Single costs = costs that can directly be attributed to a unit of product (do not exist when the product is not produced. E.g: tires to a car)Common costs= costs that can not be directly attributed to a unit of product (heating the entire hall, or depositing the product in fridges i.e. electricity for refrigeration) Full costs = single costs + common_costs / #produced products  </div>
+    </div>
+    
+    <div class="flashcard" id="card-98" onclick="showAnswer(98)">
+        <div><strong>Question:</strong></div>
+        <div> What alternatives would you consider when pricing software maintenance?</div>
+        <div class="answer" id="answer-98"><strong>Answer:</strong>  Software maintenance can be classified into:1. Corrective maintenance: Bug fixing Use a flat rate (as a percentage of project/license fees) 2. Preventive maintenance: identify and address potential issues before they become problems (regularly do security patches)3. Adaptive maintenance: make modifications to the software to be compatible with OS updates and hardware updates etc.4. Perfective maintenance: makes improvements to existing functionalities without adding new ones (performance optimisations, UI optimizations etc.) These (last 3) can included in the Corrective maintenance price or bundled in an Upgrade license ( 1/3 of the original license, but usually includes functional extensions) </div>
+    </div>
+    
+    <div class="flashcard" id="card-99" onclick="showAnswer(99)">
+        <div><strong>Question:</strong></div>
+        <div> What is Risk Surcharge Factor?</div>
+        <div class="answer" id="answer-99"><strong>Answer:</strong>  Risk Surcharge Factor = P(certain_risk) * P(detect_that_risk) * Severity(risk) e.g: P(occurrence) = 0.2 P(detection) = 0.7 Severity(error) = 0.08 (of the original effort) Risk Surcharge Factor = 0.2 * 0.7 * 0.08 = 0.0112. If Project effort = 1 500 000 EUR -> risk costs are 0.0112 * 1 500 000 = 16 800 EUR</div>
+    </div>
+    
+    <div class="flashcard" id="card-100" onclick="showAnswer(100)">
+        <div><strong>Question:</strong></div>
+        <div> Which license models do you know?</div>
+        <div class="answer" id="answer-100"><strong>Answer:</strong> Over-licensing: companies acquire more licenses than needed for fear of legal prosecution or projections about the future that don’t become true (e.g.: acquire license for more users that they have, anticipate growth in user base -> upgrade the license -> the growth doesn’t happen).Software licensing models: Static:1. Subscription based: pay fee on term2. Device licensing: license per hardware, can be transferred3. Workstation licensing: per machine, cannot be transferred4. Floating Licensing / Concurrent licensing: shared licenses that can be used across the organisation and employees, regardless of location or deviceDynamic (pay-as-you-go):1. Pay-per-use licensing: like SaaS providers, chat-gpt etc. pay per volume or hardware utilization.2. Pay-per-overage licensing: like telecom providers, have a basic fee and consumption limit and pay extra for overage </div>
+    </div>
+    
+    <div class="flashcard" id="card-101" onclick="showAnswer(101)">
+        <div><strong>Question:</strong></div>
+        <div> What is the difference between Payments and Expenditures?</div>
+        <div class="answer" id="answer-101"><strong>Answer:</strong> A Payment is an Expenditure when a decrease in cash + equiv = decrease in financial assets (buy something necessary for the company). A payment is not an Expenditure when … (e.g pay a loan). An Expenditure is not a Payment when a decrease in financial assets is not a decrease in cash and equivalents (buy something on account) </div>
+    </div>
+    
+    <div class="flashcard" id="card-102" onclick="showAnswer(102)">
+        <div><strong>Question:</strong></div>
+        <div> What is Cash Flow Statement? (When are these terms used in business accounting?)</div>
+        <div class="answer" id="answer-102"><strong>Answer:</strong>  Includes entries of Deposit / Payment</div>
+    </div>
+    
+    <div class="flashcard" id="card-103" onclick="showAnswer(103)">
+        <div><strong>Question:</strong></div>
+        <div> What is the cash flow statement and what is it used for?</div>
+        <div class="answer" id="answer-103"><strong>Answer:</strong> A cash flow statement shows the movement of cash (or equivalence) in and out of the company. They help stakeholders and other parties understand the sources of cash and utilization of cash. It is crucial for liquidity. A company is liquid if it meets the payment obligations in time. Used to determine bankruptcy/ insolvency. </div>
+    </div>
+    
+    <div class="flashcard" id="card-104" onclick="showAnswer(104)">
+        <div><strong>Question:</strong></div>
+        <div> What is the anchor effect (the magic in the middle)?</div>
+        <div class="answer" id="answer-104"><strong>Answer:</strong> When the client is presented with a range of options, they are most likely to chose something in the middle, so the max and min act as anchors which dictate the choice.</div>
+    </div>
+    
+    <div class="flashcard" id="card-105" onclick="showAnswer(105)">
+        <div><strong>Question:</strong></div>
+        <div> You are to carry out a software reengineering project. What business strategies can you pursue during the implementation and subsequent positioning of the reengineered software on the market?</div>
+        <div class="answer" id="answer-105"><strong>Answer:</strong>   NOT DONE COME BACK This is the answer but was probably discussed in class.</div>
+    </div>
+    
+    <div class="flashcard" id="card-106" onclick="showAnswer(106)">
+        <div><strong>Question:</strong></div>
+        <div> What parties are interested in a company’s balance sheet?</div>
+        <div class="answer" id="answer-106"><strong>Answer:</strong> 1. Creditors: how creditworthy is the company? Motivation: to assess the confidence of getting the debts paid.a. They have the balance sheet interest of prudence2. Shareholders: how profitable is the company?a. They have the balance sheet interest of “fair market value”3. Tax authorities: how much tax is owed?a. They have the balance sheet interest of “correct profit determination”</div>
+    </div>
+    
+    <div class="flashcard" id="card-107" onclick="showAnswer(107)">
+        <div><strong>Question:</strong></div>
+        <div> What does a conjoint analysis do, a chain of effects analysis do, or a Delphi survey look</div>
+        <div class="answer" id="answer-107"><strong>Answer:</strong> like? A Delphi Survey is an anonymous survey in which experts in a certain domain participate to forecast the development in a particular area. Anonymous results are feedback to further refine their opinions. It is believed that by independent forecasting, their opinions will converge to the true one. This serves as an indicator about the time/ duration/ quality on development of a new innovative technology. Conjoint Analysis is a survey in which individual characteristics of the product are broken down (e.g: screen size, price range, battery life, GB of RAM) and fed to the participants in order to assess which properties are the most important (generate the most variation) or how is the individual weight of each property to the value of the product. It shows which properties should be prioritized in the development process.</div>
+    </div>
+    
+    <div class="flashcard" id="card-108" onclick="showAnswer(108)">
+        <div><strong>Question:</strong></div>
+        <div> What are "network effects"?</div>
+        <div class="answer" id="answer-108"><strong>Answer:</strong> The Network effect is a phenomenon where the benefit the user gets from a product depends (logaritmicly) on the number of compatible products. More users using the product result in an increase for all other users and an increase in the motivation of non users to use the product. There is an increase in the benefit for the manufacturer of software as well. To be considered: Direct network effect: use of technology standard (3G, 5G, Bluetooth) or Facebook (or the new eu regulation USB-c charging ports) Indirect network effect: consumption of good is dependent on consumption of complementary good (e.g. playstation and games for it)</div>
+    </div>
+    
+    <div class="flashcard" id="card-109" onclick="showAnswer(109)">
+        <div><strong>Question:</strong></div>
+        <div> What is Productivity?</div>
+        <div class="answer" id="answer-109"><strong>Answer:</strong>  Earnings for Efforts</div>
+    </div>
+    
+    <div class="flashcard" id="card-110" onclick="showAnswer(110)">
+        <div><strong>Question:</strong></div>
+        <div> What is the triangle of Project Management?</div>
+        <div class="answer" id="answer-110"><strong>Answer:</strong>  It contains Time, Quality and Budget. All three are corelated.</div>
+    </div>
+    
+    <div class="flashcard" id="card-111" onclick="showAnswer(111)">
+        <div><strong>Question:</strong></div>
+        <div> What other pricing strategies do you know?</div>
+        <div class="answer" id="answer-111"><strong>Answer:</strong> 1. Artificial Scarcity: restrict the availability of the product to increase value (may increase price but also unethical and bad publicity = distrust)2. Moon prices: show discount from greater price to actual price (although it may be none)3. Name your own price: model used in auctions4. Ultra-low strategies: works when product is made out of absolutely necessary, is developed in emerging markets and has very low manufacturing costs. (e.g. dacia car brand)5. Ultra-luxury strategies: works when the value of the product is very stable, self limitation in volume of selling, no special offers prestige and quality.</div>
+    </div>
+    
+    <div class="flashcard" id="card-112" onclick="showAnswer(112)">
+        <div><strong>Question:</strong></div>
+        <div> What steps do you carry out for a full cost calculation? Why do you need this?</div>
+        <div class="answer" id="answer-112"><strong>Answer:</strong> 1. Identify costs according to the two dimensions (singular vs common (overhead); fixed vs variable)2. Allocate all common costs to the final costs’ objective through an allocation mechanism (e.g. weighted mean with importance, linear etc.)We need full cost calculations to be able to integrate common costs into the individual product costs and determine profitability.</div>
+    </div>
+    
+    <div class="flashcard" id="card-113" onclick="showAnswer(113)">
+        <div><strong>Question:</strong></div>
+        <div> Name three project management regimes.</div>
+        <div class="answer" id="answer-113"><strong>Answer:</strong> 1. Project Management Body of Knowledge (PMBOK Guide)“2. PM standard of the company "Axelos“: „Projects IN Controlled Environments (PRINCE2)“3. PM Standard of the "International Project Management Association (IPMA)“: „Individual Competence Baseline (ICB)“for Project management</div>
+    </div>
+    
+    <div class="flashcard" id="card-114" onclick="showAnswer(114)">
+        <div><strong>Question:</strong></div>
+        <div> What are the challenges of Open-Source software (from a software evolutionary perspective)?</div>
+        <div class="answer" id="answer-114"><strong>Answer:</strong>  Future planning, reliable updates, data protection</div>
+    </div>
+    
+    <div class="flashcard" id="card-115" onclick="showAnswer(115)">
+        <div><strong>Question:</strong></div>
+        <div> What are Receipts?</div>
+        <div class="answer" id="answer-115"><strong>Answer:</strong>  Receipts is increase in financial assets ( = bank balance + receivables (on account) – debts )</div>
+    </div>
+    
+    <div class="flashcard" id="card-116" onclick="showAnswer(116)">
+        <div><strong>Question:</strong></div>
+        <div> What is the difference between awareness marketing and guerrilla marketing?</div>
+        <div class="answer" id="answer-116"><strong>Answer:</strong> Awareness marketing has the goal of creating visibility of the company, without showcasing individual products. It is aimed at the entire market, not individual target groups.Guerrilla marketing is aimed at individuals or small groups of customers and is more tailored for the specific group. Mostly aimed at existing customers. Reasons are to introduce a new product to existing customers first. </div>
+    </div>
+    
+    <div class="flashcard" id="card-117" onclick="showAnswer(117)">
+        <div><strong>Question:</strong></div>
+        <div> Enter one example each, for variable overhead costs, fixed overhead costs, variable</div>
+        <div class="answer" id="answer-117"><strong>Answer:</strong> individual costs and fixed individual costs. Here assume overhead costs means common costs. In the context of car manufacturers: Fixed costs Variable costsSingular/Individual Rent / lease / costs for power consumption of individual car platform (used for production of one individual car) Costs of tires  / carCommon Rent of admin. Building (assuming number of employees doesn’t go up with # of products produced) Energy costs for operating machines</div>
+    </div>
+    
+    <div class="flashcard" id="card-118" onclick="showAnswer(118)">
+        <div><strong>Question:</strong></div>
+        <div> How would you proceed if you had to make/implement serious changes in your company?</div>
+        <div class="answer" id="answer-118"><strong>Answer:</strong>  I would use Kotter’s 8-step model. That is:1. Create a sense of urgency: argument why the change is necessary now2. Build a coalition: create a team of influential and dedicated employees to lead the change3. Develop a vision: clearly state what is the vision after the change (for the future)4. Remove barriers to change5. Celebrate small incremental successes to build momentum and interest6. Sustain acceleration7. Institute change: make the new changes part of the organization’s cultureConcrete example: migrate the whole business model from monolithic architecture to microservices.1. Create a sense of urgency: collect and present data about competitors (showing a trend towards microservices and many benefits)2. Build a coalition: create a team of developers and seniors who are experienced with microservices to lead the change3. Develop a vision: Articulate the new business model based on microservices, who will improve scalability, flexibility and speed.4. Remove barriers: eliminate reticence of developers to switching to microservices by offering trainings and establishing a support team5. Celebrate small incremental successes: start by transitioning small internal projects to microservices to show their superiority and celebrate each implementation6. Sustain acceleration: provide ongoing training and support on microservices until no longer needed7. Institute change: restructure teams, rebrand company, if necessary, fully adopt microservices</div>
+    </div>
+    
+    <div class="flashcard" id="card-119" onclick="showAnswer(119)">
+        <div><strong>Question:</strong></div>
+        <div> What is Risk?</div>
+        <div class="answer" id="answer-119"><strong>Answer:</strong> Risk is the unexpected occurrence of an undesirable event that negatively affects the operating result</div>
+    </div>
+    
+    <div class="flashcard" id="card-120" onclick="showAnswer(120)">
+        <div><strong>Question:</strong></div>
+        <div> What is a P&L statement?</div>
+        <div class="answer" id="answer-120"><strong>Answer:</strong> Change of the inventory / time and calculation of economic success. Also called Income statement.</div>
+    </div>
+    
+    <div class="flashcard" id="card-121" onclick="showAnswer(121)">
+        <div><strong>Question:</strong></div>
+        <div> What is a Delphi Survey?</div>
+        <div class="answer" id="answer-121"><strong>Answer:</strong> A Delphi Survey is an anonymous survey in which experts in a certain domain participate to forecast the development in a particular area. Anonymous results are feedback to further refine their opinions. It is believed that by independent forecasting, their opinions will converge to the true one. This serves as an indicator about the time/ duration/ quality on development of a new innovative technology. </div>
+    </div>
+    
+    <div class="flashcard" id="card-122" onclick="showAnswer(122)">
+        <div><strong>Question:</strong></div>
+        <div> What is Deposit?</div>
+        <div class="answer" id="answer-122"><strong>Answer:</strong>  Deposit is increase in cash or bank balance</div>
+    </div>
+    
+    <div class="flashcard" id="card-123" onclick="showAnswer(123)">
+        <div><strong>Question:</strong></div>
+        <div> What is Assets necessary for business operations?</div>
+        <div class="answer" id="answer-123"><strong>Answer:</strong>  Total assets (Financial Assets + tangible assets) – non-operating assets (investments) </div>
+    </div>
+    
+    <div class="flashcard" id="card-124" onclick="showAnswer(124)">
+        <div><strong>Question:</strong></div>
+        <div> What assets can be capitalized?</div>
+        <div class="answer" id="answer-124"><strong>Answer:</strong> "All assets acquired against payment (all items and rights) that can be used to cover debts through individual sale in the event of a risk of insolvency can be capitalized."</div>
+    </div>
+    
+    <div class="flashcard" id="card-125" onclick="showAnswer(125)">
+        <div><strong>Question:</strong></div>
+        <div> What is Operational Efficiency? </div>
+        <div class="answer" id="answer-125"><strong>Answer:</strong>  Earnings / Efforts</div>
+    </div>
+    
+    <div class="flashcard" id="card-126" onclick="showAnswer(126)">
+        <div><strong>Question:</strong></div>
+        <div> Why do so many effort estimates turn out to be wrong during the course of the project?</div>
+        <div class="answer" id="answer-126"><strong>Answer:</strong> Missing / incorrect initial information, empirical values are missing / incorrect, not all relevant senior-experts have been interviewed beforehand. Similar project do not exist to be able to compare them.</div>
+    </div>
+    
+    <div class="flashcard" id="card-127" onclick="showAnswer(127)">
+        <div><strong>Question:</strong></div>
+        <div> What does a typical lead generation process look like?</div>
+        <div class="answer" id="answer-127"><strong>Answer:</strong> 1. Determine number of leads to be generated2. Define a market budget3. Plan the generation of leads: create events (trade fairs, seminars, mailing lists) 4. Follow-up: record and qualify leads (issue quotations) and collect metricsa. Cost-per-leadb. Closing-rate-per-lead (leads that end in a closed deal / total leads)Problems with lead generation:- Wrong target audience- Wrong medium- Incorrect assessing of leads"Blue Bird": is a customer who requested an offer and then immediately accepted the offerExample:  A product house aims to achieve sales of €18 million during the fiscal year.The average order size is €50,000, so a total of 360 orders must be completed.The average hit rate for quotations is 70%, i.e. 515 quotations have to be created by the sales staff.On average, 5% of the leads are qualified enough for an offer to be drawn up. This means that 10,300 leads must be generated.The sales/marketing budget for this amounts to €570,000, i.e. this results in a cost-per-lead (CpL) of €55.34</div>
+    </div>
+    
+    <div class="flashcard" id="card-128" onclick="showAnswer(128)">
+        <div><strong>Question:</strong></div>
+        <div> What kind of company could it be that has to prepare its accounts according to all of these accounting methods (HGB accounting and US GAAP or IFRS accounting)?</div>
+        <div class="answer" id="answer-128"><strong>Answer:</strong>  A multinational company with operations in USA, Germany and other countries.</div>
+    </div>
+    
+    <div class="flashcard" id="card-129" onclick="showAnswer(129)">
+        <div><strong>Question:</strong></div>
+        <div> What does a transaction cost analysis look like, and what can it be used for?</div>
+        <div class="answer" id="answer-129"><strong>Answer:</strong> Transaction cost analysis is a method to evaluate the costs associated with executing financial transactions in order to ensure that trades were arranged at a favourable price (buy for low, sell on high).</div>
+    </div>
+    
+    <div class="flashcard" id="card-130" onclick="showAnswer(130)">
+        <div><strong>Question:</strong></div>
+        <div> How would you calculate a break-even point?</div>
+        <div class="answer" id="answer-130"><strong>Answer:</strong> Let N = #products, p = price per product, vc = variable cost per product, FC = fixed costs, then to achieve a break-even (no loss, no profit; profit = 0), then we have thatProfit = CM – FC = N(p-vc) – FC = 0 -> N = FC / (p-vc). That is the volume of product that needs to be sold to achieve break-even point.</div>
+    </div>
+    
+    <div class="flashcard" id="card-131" onclick="showAnswer(131)">
+        <div><strong>Question:</strong></div>
+        <div> What is the difference between Receipts and Earnings?</div>
+        <div class="answer" id="answer-131"><strong>Answer:</strong> A Receipt is an Earning when an increase in financial assets = increase in net worth (e.g sell a product in profit). A Receipt is not an Earning when an increase in financial assets is not an increase in net worth (e.g. sell a property for no profit so just change property -> cash ; increase in money but not in net worth). An Earning is not a Receipt when net worth increases without selling anything (e.g property price goes up) </div>
+    </div>
+    
+    <div class="flashcard" id="card-132" onclick="showAnswer(132)">
+        <div><strong>Question:</strong></div>
+        <div> What is a profit and loss statement and how is it structured?</div>
+        <div class="answer" id="answer-132"><strong>Answer:</strong> A profit and loss statement is a financial report that summarizes the revenues, costs and expenses during a period of time. It is different from a Balance Sheet, that only shows a snapshot of liabilities and assets at a certain time. It can be staggered-down or have two columns for debit and credit.        Debit is what is sold, credit is the revenue and earnings. The difference between sum(Credit) – sum(debit) is profit or equity. Profit is written down in debit but its actually first calculated by subtracting credit. If the balance is not equal there is either profit (equity) or loss.</div>
+    </div>
+    
+    <div class="flashcard" id="card-133" onclick="showAnswer(133)">
+        <div><strong>Question:</strong></div>
+        <div> What does a typical sales cycle look like?</div>
+        <div class="answer" id="answer-133"><strong>Answer:</strong> 1. Request for information: non binding info about the product/service2. Request for quotation/ proposal: binding offer3. Actual Offer: binding and legally adequate4. Negotiation5. Conclusion of contract6. After sales follow up: customer satisfaction, maintenance, sales of additional products</div>
+    </div>
+    
+    <div class="flashcard" id="card-134" onclick="showAnswer(134)">
+        <div><strong>Question:</strong></div>
+        <div> What is Net Worth?</div>
+        <div class="answer" id="answer-134"><strong>Answer:</strong>  Financial Assets + tangible assets</div>
+    </div>
+    
+    <div class="flashcard" id="card-135" onclick="showAnswer(135)">
+        <div><strong>Question:</strong></div>
+        <div> In which areas do you think it might not make sense to use standard software?</div>
+        <div class="answer" id="answer-135"><strong>Answer:</strong> Any specific critical area where a software product needs to be specifically designed just for that purpose i.e. National Security, Nuclear Reactor related software, software for satelites.  </div>
+    </div>
+    
+    <div class="flashcard" id="card-136" onclick="showAnswer(136)">
+        <div><strong>Question:</strong></div>
+        <div> Explain in which situations you would use Make, Buy, Share or Rent, and which decision criteria you would apply?</div>
+        <div class="answer" id="answer-136"><strong>Answer:</strong>  ???</div>
+    </div>
+    
+    <div class="flashcard" id="card-137" onclick="showAnswer(137)">
+        <div><strong>Question:</strong></div>
+        <div> What is contribution margin 1?</div>
+        <div class="answer" id="answer-137"><strong>Answer:</strong> Contribution margin 1 (or just Contribution Margin) is Revenue of product unit (turnover) – variable costs.</div>
+    </div>
+    
+    <div class="flashcard" id="card-138" onclick="showAnswer(138)">
+        <div><strong>Question:</strong></div>
+        <div> What is the difference between solution-oriented selling and provocative selling?</div>
+        <div class="answer" id="answer-138"><strong>Answer:</strong> Solution-oriented selling: understand the customer’s needs and offer a solution to address those needs. Focused on dialogue, begin with a proof of technical feasibility, address known weaknesses, Feature -> Benefit -> Value. Spread of effort over a longer period of time.Provocative selling: challenge the customer current way of thinking, introduce a new perspective and a new need that is not, at the beginning, explicit for the customer. Challenge the status quo. Disruptive in nature, introduces thought-provoking ideas, more focused on risk taking, present new aspects to the customer regarding their situation. Effort is focused on the beginning of the negotiation time until the deal is closed. Thesis - Solution - Valuee.g: the customer wants a new database system, the seller convinces the customer that they should rethink their entire architecture from monolithic to microservices.</div>
+    </div>
+    
+    <div class="flashcard" id="card-139" onclick="showAnswer(139)">
+        <div><strong>Question:</strong></div>
+        <div> What is Expenditure?</div>
+        <div class="answer" id="answer-139"><strong>Answer:</strong>  Decrease in financial assets</div>
+    </div>
+    
+    <div class="flashcard" id="card-140" onclick="showAnswer(140)">
+        <div><strong>Question:</strong></div>
+        <div> What is Costs?</div>
+        <div class="answer" id="answer-140"><strong>Answer:</strong> Decrease in Assets necessary for business operation (consumption of values during the creation of operational business activities)</div>
+    </div>
+    
+    <div class="flashcard" id="card-141" onclick="showAnswer(141)">
+        <div><strong>Question:</strong></div>
+        <div> What are the specifics of cloud software?</div>
+        <div class="answer" id="answer-141"><strong>Answer:</strong> The cloud provider takes care up to a certain degree of the infrastructure needs of the company and offers certain software services that take care of the most important aspects of storing and retrieving data. The level of abstractization of these services depends on the type of service model: Infrastructure as a service offers only the infrastructure and VMs that can be used in any way the client desires, Platform as a service adds another level of abstractization, the clients works directly on predefined runtimes and Software as a Service offers direct high-level building blocks to the client that fullfill certain high-level tasks.</div>
+    </div>
+    
+    <div class="flashcard" id="card-142" onclick="showAnswer(142)">
+        <div><strong>Question:</strong></div>
+        <div> When is a software called a product?</div>
+        <div class="answer" id="answer-142"><strong>Answer:</strong> When the manufacturer maintains the software specifically for target user groups, has an active management and update cycle, assistance and other services are offered around the software itself (e.g: changes or extra functionality at the desire of the client)</div>
+    </div>
+    
+    <div class="flashcard" id="card-143" onclick="showAnswer(143)">
+        <div><strong>Question:</strong></div>
+        <div> What is business process reengineering (BPR)?</div>
+        <div class="answer" id="answer-143"><strong>Answer:</strong> BPR is the radical redesign of existing business processes (e.g. hiring) to achieve dramatic improvements in critical aspects such as costs, quality or speed. The goal is to cut down enterprise costs and process redundancies on a very huge scale.</div>
+    </div>
+    
+    <div class="flashcard" id="card-144" onclick="showAnswer(144)">
+        <div><strong>Question:</strong></div>
+        <div> What are ancillary costs?</div>
+        <div class="answer" id="answer-144"><strong>Answer:</strong> Ancillary costs are costs incurred through the direct use of rental property / consultants (e.g.: travel / accommodation costs).</div>
+    </div>
+    
+</div>
+
+<button onclick="showPrevious()">Previous</button>
+<button onclick="showNext()">Next</button>
+
+<script>
+    let currentIndex = 0;
+    const flashcards = document.querySelectorAll('.flashcard');
+
+    function showFlashcard(index) {{
+        flashcards.forEach(card => card.style.display = 'none');
+        flashcards[index].style.display = 'block';
+    }}
+
+    function showAnswer(index) {{
+        const answerElement = document.getElementById('answer-' + index);
+        answerElement.style.display = 'block';
+    }}
+
+    function showPrevious() {{
+        if (currentIndex > 0) {{
+            currentIndex--;
+            showFlashcard(currentIndex);
+        }}
+    }}
+
+    function showNext() {{
+        if (currentIndex < flashcards.length - 1) {{
+            currentIndex++;
+            showFlashcard(currentIndex);
+        }}
+    }}
+
+    // Initial display
+    showFlashcard(currentIndex);
+</script>
+
+</body>
+</html>
